@@ -37,7 +37,7 @@ const allPlugs = Object.values(plugs).map((plug) => {
 })
 
 export default createSchema({
-  name: 'blog',
+  name: 'career',
   types: schemaTypes // Built-in types
     // Our custom types
     .concat([

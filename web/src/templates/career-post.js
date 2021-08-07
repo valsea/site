@@ -2,13 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
-import BlogPost from "../components/blog-post";
+import CareerPost from "../components/career-post";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 import { toPlainText } from "../lib/helpers";
 
 export const query = graphql`
-  query BlogPostTemplateQuery($id: String!) {
+  query CareerPostTemplateQuery($id: String!) {
     post: sanityPost(id: { eq: $id }) {
       id
       publishedAt
@@ -57,7 +57,7 @@ export const query = graphql`
   }
 `;
 
-const BlogPostTemplate = props => {
+const CareerPostTemplate = props => {
   const { data, errors } = props;
   const post = data && data.post;
   return (
@@ -77,9 +77,9 @@ const BlogPostTemplate = props => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && <CareerPost {...post} />}
     </Layout>
   );
 };
 
-export default BlogPostTemplate;
+export default CareerPostTemplate;

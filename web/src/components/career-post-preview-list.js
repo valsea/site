@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
 import React from "react";
-import BlogPostPreview from "./blog-post-preview";
+import CareerPostPreview from "./career-post-preview";
 
-import * as styles from "./blog-post-preview-list.module.css";
+import * as styles from "./career-post-preview-list.module.css";
 
-function BlogPostPreviewGrid(props) {
+function CareerPostPreviewGrid(props) {
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
@@ -12,7 +12,7 @@ function BlogPostPreviewGrid(props) {
         {props.nodes &&
           props.nodes.map(node => (
             <li key={node.id}>
-              <BlogPostPreview {...node} isInList />
+              <CareerPostPreview {...node} isInList />
             </li>
           ))}
       </ul>
@@ -25,10 +25,10 @@ function BlogPostPreviewGrid(props) {
   );
 }
 
-BlogPostPreviewGrid.defaultProps = {
+CareerPostPreviewGrid.defaultProps = {
   title: "",
   nodes: [],
   browseMoreHref: ""
 };
 
-export default BlogPostPreviewGrid;
+export default CareerPostPreviewGrid;

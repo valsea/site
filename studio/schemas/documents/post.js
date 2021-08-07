@@ -1,7 +1,7 @@
 export default {
   name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Career Post',
   fields: [
     {
       name: 'title',
@@ -104,7 +104,7 @@ export default {
       media: 'mainImage',
     },
     prepare({ title = 'No title', publishedAt, slug = {}, media }) {
-      const path = `/blog/${slug.current}`
+      const path = `/career/${slug.current}`
       return {
         title,
         media,

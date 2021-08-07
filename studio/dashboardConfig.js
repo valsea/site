@@ -19,7 +19,7 @@ export default {
                 },
                 {
                   buildHookId: '610dbc2ea0112c3d1c21b3a3',
-                  title: 'Blog Website',
+                  title: 'Career Website',
                   name: 'site-web-bwp5z379',
                   apiId: '449a6fe5-2b9a-4bf6-aa7d-075b7783e138'
                 }
@@ -40,7 +40,7 @@ export default {
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      options: {title: 'Recent career posts', order: '_createdAt desc', types: ['post']},
       layout: {width: 'medium'}
     }
   ]

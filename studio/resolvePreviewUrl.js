@@ -9,7 +9,7 @@ export default function resolvePreviewUrl(document) {
       }
       return `${baseUrl}/${document.slug.current}`
     case 'post':
-      return `${baseUrl}/blog/${document.slug.current}`
+      return `${baseUrl}/career/${document.slug.current}`
     case 'siteSettings':
       return baseUrl
     case 'page':

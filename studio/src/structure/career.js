@@ -1,6 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder'
 import {
-  GoMegaphone as BlogIcon,
+  GoMegaphone as CareerIcon,
   GoChecklist as ApprovedIcon,
   GoEye as ReviewIcon,
   GoCircleSlash as RejectedIcon,
@@ -11,24 +11,24 @@ import {
 import PreviewIFrame from '../../src/components/previewIFrame'
 
 export const icons = {
-  BlogIcon,
+  CareerIcon,
   ApprovedIcon,
   ReviewIcon,
   RejectedIcon,
   AllIcon,
 }
 
-const blog = S.listItem()
-  .title('Blog')
-  .icon(BlogIcon)
+const career = S.listItem()
+  .title('Career')
+  .icon(CareerIcon)
   .child(
     S.list()
-      .title('/blog')
+      .title('/career')
       .items([
         S.listItem()
           .title('Published posts')
           .schemaType('post')
-          .icon(BlogIcon)
+          .icon(CareerIcon)
           .child(
             S.documentList('post')
               .title('Published posts')
@@ -67,4 +67,4 @@ const blog = S.listItem()
       ])
   )
 
-export default blog
+export default career

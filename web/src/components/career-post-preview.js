@@ -1,18 +1,18 @@
 import { format } from "date-fns";
 import { Link } from "gatsby";
 import React from "react";
-import { buildImageObj, cn, getBlogUrl } from "../lib/helpers";
+import { buildImageObj, cn, getCareerUrl } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import PortableText from "./portableText";
 
-import * as styles from "./blog-post-preview.module.css";
+import * as styles from "./career-post-preview.module.css";
 import { responsiveTitle3 } from "./typography.module.css";
 
-function BlogPostPreview(props) {
+function CareerPostPreview(props) {
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
-      to={getBlogUrl(props.slug.current)}
+      to={getCareerUrl(props.slug.current)}
     >
       <div className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (
@@ -39,4 +39,4 @@ function BlogPostPreview(props) {
   );
 }
 
-export default BlogPostPreview;
+export default CareerPostPreview;

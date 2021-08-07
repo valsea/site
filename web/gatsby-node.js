@@ -52,7 +52,7 @@ async function createLandingPages(pathPrefix = "/", graphql, actions, reporter) 
   });
 }
 
-async function createBlogPostPages(pathPrefix = "/blog", graphql, actions, reporter) {
+async function createCareerPostPages(pathPrefix = "/career", graphql, actions, reporter) {
   const { createPage } = actions;
   const result = await graphql(`
     {
@@ -78,10 +78,10 @@ async function createBlogPostPages(pathPrefix = "/blog", graphql, actions, repor
     .forEach(edge => {
       const { id, slug = {} } = edge.node;
       const path = `${pathPrefix}/${slug.current}/`;
-      reporter.info(`Creating blog post page: ${path}`);
+      reporter.info(`Creating career post page: ${path}`);
       createPage({
         path,
-        component: require.resolve("./src/templates/blog-post.js"),
+        component: require.resolve("./src/templates/career-post.js"),
         context: { id }
       });
     });
@@ -89,5 +89,5 @@ async function createBlogPostPages(pathPrefix = "/blog", graphql, actions, repor
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createLandingPages("/", graphql, actions, reporter);
-  await createBlogPostPages("/blog", graphql, actions, reporter);
+  await createCareerPostPages("/career", graphql, actions, reporter);
 };
